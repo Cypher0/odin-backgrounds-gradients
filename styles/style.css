@@ -6,43 +6,52 @@ a {
   color: white;
 }
 
+body {
+  margin: 0;
+}
+
 /* Main Hero */
 
 .container-main {
   display: grid;
   grid-template-columns: 1fr minmax(1024px, 1440px) 1fr;
+  grid-template-rows: minmax(538px, 1315px) 200px 90px;
+  grid-gap: 1px;
+  height: 100vh;
+}
+
+article, aside, footer {
+  grid-column: 2 / span 4;
 }
 
 article {
-  grid-column: 2 / span 4;
   max-width: 1440px;
-  height: 538px;
   background: url('../images/hero.jpg') bottom no-repeat;
+  background-size: auto;
 }
 
 .header-nav {
   margin: 90px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 980px;
   height: 36px;
+  padding-left: 0;
   list-style-type: none;
+  border-radius: 3px;
   background: linear-gradient(#707070, #707070 50%, #808080 50%, #808080)
 }
+
 
 .play-btn {
   width: 25px;
   height: 25px;
 }
 
-aside {
-  grid-column: 2 / span 4;
-}
 
 .promos-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(256px, 360px));
+  grid-template-columns: repeat(4, minmax(256px, 359px));
+  grid-gap: 1px;
+  height: 200px;
 }
 
 .promos-list >* img {
@@ -50,3 +59,48 @@ aside {
   height: 200px;
 }
 
+/* Footer */
+
+footer {
+  color: #6e6e6e;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: left;
+  align-items: center;
+  margin: 0 auto;
+  width: 980px;
+  height: 90px;
+  font-size: 10px;
+}
+
+.terms {
+  margin-top: -30px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.footer-nav li {
+  padding: 3px;
+}
+
+.footer-nav img {
+  width: 18px;
+  height: 18px;
+  padding-left: 5px;
+}
+
+footer a {
+  color: #08c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
