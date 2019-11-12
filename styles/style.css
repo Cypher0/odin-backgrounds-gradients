@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-/* Main Hero */
+/* Header */
 
 .container-main {
   display: grid;
@@ -33,7 +33,7 @@ article {
 .header-nav {
   display: table;
   table-layout: fixed;
-  margin: 90px auto;
+  margin: 90px auto 0 auto;
   width: 980px;
   border-radius: 3px;
   background: linear-gradient(#707070, #707070 50%, #808080 50%, #808080)
@@ -41,11 +41,10 @@ article {
 
 .header-logo,
 .play-btn {
+  display: inline-block;
   height: 25px;
   width: 25px;
-  display: inline-block;
   vertical-align: middle;
-  t
 }
 
 .header-nav a {
@@ -59,7 +58,7 @@ article {
 }
 
 .header-nav a:hover {
-  background-color: #413f3f;
+  background: linear-gradient(#444444, #444444 50%, #333333 50%, #333333);
 }
 
 .header-nav input {
@@ -67,18 +66,54 @@ article {
   padding: 2px 0 2px 23px;
   width: 70px;
   height: 19px;
-  background: url("../images/search.png") 5% no-repeat;
-  background-size: 16px;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.6) 0 2px 1px inset, rgba(255, 255, 255, 0.2) 0 1px 0;
   border: none;
   border-radius: 12px;
+  background: url("../images/search.png") 5% no-repeat;
+  background-size: 16px;
 }
+
+/* Main content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 680px;
+}
+
+h1 {
+  margin-bottom: -40px;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.content p {
+  text-align: center;
+}
+
+.content p a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+
+.content p a:hover {
+  text-decoration: underline;
+}
+
+/* Promotions area */
 
 .promos-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(256px, 359px));
   grid-gap: 1px;
+  max-width: 1440px;
   height: 200px;
 }
 
@@ -90,15 +125,18 @@ article {
 /* Footer */
 
 footer {
-  color: #6e6e6e;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(25px, 230px) 495px 485px minmax(25px, 230px);
   justify-items: left;
   align-items: center;
-  margin: 0 auto;
-  width: 980px;
+  max-width: 1440px;
   height: 90px;
+  color: #6e6e6e;
   font-size: 10px;
+}
+
+footer p {
+  grid-column-start: 2;
 }
 
 .terms {
